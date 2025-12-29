@@ -1,11 +1,14 @@
-import { Button } from "@/components/ui/button";
+import Hero from "./hero"
+import Features from "./features"
+import CallToAction from "./cta"
 
-export default function HomePage() {
+export default function Home() {
   return (
-    <main className="flex min-h-screen items-center justify-center">
-      <Button>
-        Get Started
-      </Button>
-    </main>
-  );
+    <>
+      <Hero />
+      <Features />
+      <CallToAction />
+    </>
+  )
 }
+
