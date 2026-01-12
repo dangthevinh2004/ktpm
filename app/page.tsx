@@ -1,4 +1,4 @@
-import { transactions } from "@/lib/transactions";
+import TransactionList from "./transaction-list";
 
 export default function Home() {
   return (
@@ -7,25 +7,8 @@ export default function Home() {
         Transactions
       </h1>
 
-      <ul className="space-y-2">
-        {transactions.map((tx) => (
-          <li
-            key={tx.id}
-            className="border p-3 rounded-lg flex justify-between"
-          >
-            <span>{tx.title}</span>
-            <span
-              className={
-                tx.type === "income"
-                  ? "text-green-600"
-                  : "text-red-600"
-              }
-            >
-              {tx.type === "income" ? "+" : "-"}${tx.amount}
-            </span>
-          </li>
-        ))}
-      </ul>
+      <TransactionList />
     </main>
   );
 }
+C:\xampp\htdocs\New folder\page.tsx
